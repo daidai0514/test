@@ -21,7 +21,7 @@ def random_card(number):
     
     return card_list
 
-cards_list = random_card(1)
+cards_list = random_card(1000)
 counts = [cards_list.count('3star'),cards_list.count('2star'),cards_list.count('1star')]
 
 print(counts)
