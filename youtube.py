@@ -6,5 +6,6 @@ yt = YouTube(input("輸入Youtube影片網址："))
 print(f"開始下載{yt.title}")
 
 path = os.getcwd()+"\\music\\"
-yt.streams.get_audio_only().download(filename=yt.title+".mp3", output_path=path)
+# OSError: [Errno 22] Invalid argument：此錯誤為youtube片名有其他符號所導致，與output_path無關
+yt.streams.get_audio_only().download(output_path=path)
 print("下載成功")
